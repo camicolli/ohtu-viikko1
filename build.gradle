@@ -34,13 +34,16 @@ dependencies {
 // Define the main class for the application
 mainClassName = 'ohtu.ohtuvarasto.Main'
 
-jar {
-    manifest {
-        attributes 'Main-Class': 'ohtu.ohtuvarasto.Main'
-    }
-}jacocoTestReport {
+
+jacocoTestReport {
     reports {
         xml.enabled = true // coveralls plugin depends on xml format report
         html.enabled = true
     }
 }
+jar {
+    manifest {
+        attributes 'Main-Class': 'ohtu.ohtuvarasto.Main'
+    }
+}
+
